@@ -17,7 +17,7 @@ class FitsManager:
   def get_hdu_count(self):#quanti hdu sono in questo fits
     return len(self.hdulist) 
   
-  def get_get_header(self, hdu_index):#gli passo indice, quello dell'hdu voglio aprire, e mi restituisce header di quell'hdu
+  def get_header(self, hdu_index):#gli passo indice, quello dell'hdu voglio aprire, e mi restituisce header di quell'hdu
     if hdu_index <0 or hdu_index>=len(self.hdulist):
       raise ValueError("invalid hdu index")
     return self.hdulist[hdu_index].header
